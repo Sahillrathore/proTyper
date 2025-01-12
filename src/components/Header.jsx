@@ -7,8 +7,8 @@ const Header = () => {
             <div className="logo text-white">Logo</div>
 
             <nav className='flex gap-5 items-center justify-center text-white'>
-                <li className='cursor-pointer list-none hover:text-purple-500  '>Home</li>
-                <li className='cursor-pointer list-none hover:text-purple-500  ' >Leaderboards</li>
+                <li className='cursor-pointer list-none hover:text-purple-500 transition-colors '>Home</li>
+                <li className='cursor-pointer list-none hover:text-purple-500 transition-colors ' >Leaderboards</li>
             </nav>
 
             <div className='text-white'>
