@@ -5,8 +5,8 @@ import TypingArea from './components/TypingArea'
 const App = () => {
   return (
     <div>
-      <Header/>
-      <TypingArea/>
+      <Header />
+      <TypingArea />
     </div>
   )
 }
