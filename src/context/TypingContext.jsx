@@ -3,7 +3,7 @@ import { createContext, useContext, useState } from "react";
 
 const TypingContext = createContext();
 
-export const TypingContextProvider = ({children}) => {
+export const TypingContextProvider = ({ children }) => {
 
     const [testTime, setTestTime] = useState(10);
 
@@ -11,8 +11,8 @@ export const TypingContextProvider = ({children}) => {
         testTime,
         setTestTime
     }
-    
-    return(
+
+    return (
         <TypingContext.Provider value={values}>
             {children}
         </TypingContext.Provider>

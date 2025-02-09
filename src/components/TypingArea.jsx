@@ -53,43 +53,43 @@ const TypingArea = () => {
         <div className="min-h-[90vh] flex flex-col justify-center items-center max-w-[70%] mx-auto">
             <TestOptions />
 
-            <div
-                className="p-6 min-h-44 bg-black/30 rounded-lg w-full mx-auto items-center relative flex-wrap flex"
-                onClick={focusInput}
-            >
-                {randomWords.map((word, wordIndex) => (
-                    <span
-                        className={`text-gray-200 leading-normal font-normal text-2xl ${wordIndex === currentWordIndex ? "underline" : ""
-                            }`}
-                        key={wordIndex}
-                    >
-                        &nbsp;
-                        {word.split("").map((letter, letterIndex) => {
-                            let color = "text-gray-200"; // Default color
-                            if (wordIndex === currentWordIndex && letterStatuses[letterIndex]) {
-                                switch (letterStatuses[letterIndex]) {
-                                    case "correct":
-                                        color = "text-green-500";
-                                        break;
-                                    case "incorrect":
-                                        color = "text-red-500";
-                                        break;
-                                    case "extra":
-                                        color = "text-yellow-500";
-                                        break;
-                                    default:
-                                        color = "text-gray-200";
+                <div
+                    className="p-6 min-h-44 bg-black/30 rounded-lg w-full mx-auto items-center relative flex-wrap flex"
+                    onClick={focusInput}
+                >
+                    {randomWords.map((word, wordIndex) => (
+                        <span
+                            className={`text-gray-200 leading-normal font-normal text-2xl ${wordIndex === currentWordIndex ? "underline" : ""
+                                }`}
+                            key={wordIndex}
+                        >
+                            &nbsp;
+                            {word.split("").map((letter, letterIndex) => {
+                                let color = "text-gray-200"; // Default color
+                                if (wordIndex === currentWordIndex && letterStatuses[letterIndex]) {
+                                    switch (letterStatuses[letterIndex]) {
+                                        case "correct":
+                                            color = "text-green-500";
+                                            break;
+                                        case "incorrect":
+                                            color = "text-red-500";
+                                            break;
+                                        case "extra":
+                                            color = "text-yellow-500";
+                                            break;
+                                        default:
+                                            color = "text-gray-200";
+                                    }
                                 }
-                            }
-                            return (
-                                <span key={letterIndex} className={`${color}`}>
-                                    {letter}
-                                </span>
-                            );
-                        })}
-                    </span>
-                ))}
-            </div>
+                                return (
+                                    <span key={letterIndex} className={`${color}`}>
+                                        {letter}
+                                    </span>
+                                );
+                            })}
+                        </span>
+                    ))}
+                </div>
 
             <input
                 type="text"
